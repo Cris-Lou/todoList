@@ -1,0 +1,52 @@
+/* general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("images/emma-matthews-digital-content-production-8K62atzbulQ-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100%;
+}
+
+/* input */
+#newTask{
+    background-color: white;
+}
+
+/* bouton ajouter*/
+#addButton {
+    background-color: green;
+    border-color:green;
+    color:white;
+}
+
+/* zone nouvelle tache*/
+#newTaskZone{
+background-color: rgba(255, 248, 219,0.5);
+padding:2rem;
+}
+
+/*zone liste de taches*/
+#tasksZone{
+    background-color: rgba(8, 152, 177, 0.199);
+    padding:2rem;
+}
+
+/*liste de taches*/
+#tasksList{
+    background-color: rgba(255, 248, 219, 0.589);
+
+}
+
+/* bouton supprimer*/
+#deleteButton{
+    background-color: red;
+    border-color: red;
+    color: white;
+    margin-left: 30px;
+    margin-top: 5px;
+}
