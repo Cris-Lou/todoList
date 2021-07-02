@@ -9,8 +9,10 @@
 <body>
     <div id="newTaskZone">
         <h1>enter a new task</h1>
-        <form action="">
-            <input type="text" class=".paper" id="newTask"  placeholder="nouvelle tâche">
+        <br action="">
+            <span>Veuillez saisir votre nouvelle tâche</span>
+            <input type="text" class=".paper" id="newTask"  placeholder="nouvelle tâche" required minlength="2">
+            <span id="error"></span></br>
             <button type="submit" id="addButton">ajouter</button>
         </form>
     </div>

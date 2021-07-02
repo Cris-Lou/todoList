@@ -50,3 +50,9 @@ padding:2rem;
     margin-left: 30px;
     margin-top: 5px;
 }
+
+/* message d'erreur */
+#error{
+    color: white;
+    background-color: red;
+}
