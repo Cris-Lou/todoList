@@ -6,7 +6,6 @@ let newTask = document.getElementById("newTask");//récup input
 let tasksList = document.querySelector("#tasksList"); //récup ul
 // let liste = document.createElement("li");//implémentation li
 // let liste = document.querySelector("#liste");
-let deleteButton; //recup delete button
 let storageContent;//valeur du local storage
 let error = document.getElementById("error");//recup message invalidité input
 
@@ -37,7 +36,34 @@ function getValues(){
 addButton.addEventListener("click", function(e){//mise sur écoute de addButton
     e.preventDefault();
     if (newTask.validity.valid){//vérification de validité de l'input
-        tasksList.innerHTML +=`<li class="liste">${newTask.value}<span><button id="deleteButton">supprimer</button></span></li>`;// création contenu de chaque li
+        tasksList.innerHTML +=`<li class="liste">${newTask.value}</li>`;// création contenu de chaque li
+        /* <span><button id="checkButton">tâche effectuée</button></span>
+            =<span><button id="editButton">modifier la tâche</button></span>
+            <span><button id="deleteButton">supprimer la tâche</button></span> */
+        
+        // création du bouton valider la tâche
+        const checkButton = document.createElement("button");
+        checkButton.innerHTML = '<i class="fas fa-check"></i>';
+        checkButton.classList.add("checkButton");
+        tasksList.appendChild(checkButton);
+
+        // création du bouton modifier la tâche
+        const editButton = document.createElement("button");
+        editButton.innerHTML = '<i class="fas fa-pen"></i>';
+        editButton.classList.add("editButton");
+        tasksList.appendChild(editButton);
+
+        // création du bouton supprimer la tâche
+        const deleteButton = document.createElement("button");
+        deleteButton.innerHTML = '<i class="fas fa-times"></i>';
+        deleteButton.classList.add("deleteButton");
+        tasksList.appendChild(deleteButton);
+
+        // deleteButton.addEventListener("click", function(){
+        //    deleteButton.onclick = newTask.target.remove();
+        //    storage();
+        // });
+
         storage();//sauvegarde dans local storage de la li ainsi créée 
         newTask.value ="";//reinitialisation du champs de l'input
     }
@@ -46,12 +72,5 @@ addButton.addEventListener("click", function(e){//mise sur écoute de addButton
     }  
 });
 
-
-// effacer une tâche à résoudre en rendant accessible deleteButton depuis HTML
-// deleteButton.addEventListener("click", function(e){
-//     e.preventDefault();
-//     deleteButton.onclick = e.target.remove();
-//     storage();
-// });
-
 getValues();// recuperation de la liste pré existante depuis le local storage
+

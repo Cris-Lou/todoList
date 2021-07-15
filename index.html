@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.2/dist/paper.min.css">
+    <script src="https://kit.fontawesome.com/b686c18f81.js" crossorigin="anonymous"></script>
     <title>to do list</title>
 </head>
 <body>
     <div id="newTaskZone">
-        <h1>enter a new task</h1>
+        <h1 class="newTaskTitle">enter a new task</h1>
         <br action="">
             <span>Veuillez saisir votre nouvelle tâche</span>
             <input type="text" class=".paper" id="newTask"  placeholder="nouvelle tâche" required minlength="2">
             <span id="error"></span></br>
-            <button type="submit" id="addButton">ajouter</button>
+            <button type="submit" id="addButton">ajouter la tâche</button>
         </form>
     </div>
 
     <div id="tasksZone">
-        <h1>to do</h1>
+        <h1 class="taskTitle">your tasklists </h1>
         <ul id="tasksList">
+            <!-- <div class="listContainer">
+
+            </div> -->
         </ul>
     </div>
 
