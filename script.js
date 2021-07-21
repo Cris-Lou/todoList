@@ -6,7 +6,6 @@ let newTask = document.getElementById("newTask");//récup input
 let tasksList = document.querySelector("#tasksList"); //récup ul
 let storageContent;//valeur du local storage
 let error = document.getElementById("error");//recup message invalidité input
-let listeItem = document.getElementsByClassName("listItem");// selector du style de la liste
 
 /***
  * déclarations de fonctions
@@ -57,7 +56,7 @@ addButton.addEventListener("click", function(e){//mise sur écoute de addButton
                     liste.style.color = "black";
                     liste.style.textDecoration = "none";
                     storage();
-                    
+                }    
             });
 
 
@@ -68,19 +67,23 @@ addButton.addEventListener("click", function(e){//mise sur écoute de addButton
         tasksList.appendChild(editButton);
 
             //activation bouton modifier
-            editButton.addEventListener("click",function(){//mise sur écoute du bouton
-            
-            });
+            // editButton.addEventListener("click",function(){//mise sur écoute du bouton
+            // });
+
         // création du bouton supprimer la tâche
         const deleteButton = document.createElement("button");
         deleteButton.innerHTML = '<i class="fas fa-times"></i>';
         deleteButton.classList.add("deleteButton");
         tasksList.appendChild(deleteButton);
 
-        // deleteButton.addEventListener("click", function(){
-        //    deleteButton.onclick = liste.target.remove();
-        //    storage();
-        // });
+            //activation bouton modifier
+            deleteButton.addEventListener("click", function(){
+            liste.remove();
+            checkButton.remove();
+            editButton.remove();
+            deleteButton.remove();
+            storage();
+            });
 
         storage();//sauvegarde dans local storage de la li ainsi créée 
         newTask.value ="";//reinitialisation du champs de l'input
