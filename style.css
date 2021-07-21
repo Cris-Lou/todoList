@@ -5,16 +5,9 @@
     box-sizing: border-box;
 }
 
-body {
-    background-image: url("images/jared-rice-NTyBbu66_SI-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100%;
-}
-
 /* input */
-#newTask{
-    background-color: white;
+::placeholder{
+    color: rgba(0, 0, 0, 0.185);
 }
 
 /* bouton ajouter*/
@@ -26,8 +19,8 @@ body {
 
 /* zone nouvelle tache*/
 #newTaskZone{
-background-color: rgba(255, 248, 219,0.5);
-padding:2rem;
+    background-color: rgba(255, 248, 219,0.5);
+    padding:2rem;
 }
 
 /*zone liste de taches*/
@@ -36,11 +29,7 @@ padding:2rem;
     padding:2rem;
 }
 
-.taskTitle{
-    color: white;
-}
-
-.taskTitle, .newTaskTitle {
+.newTaskTitle {
     text-align: center;
 }
 
@@ -57,8 +46,8 @@ padding:2rem;
 
 /* bouton fait*/
 .checkButton{
-    background-color:white;
-    border-color:rgb(114, 204, 114);
+    background-color:rgb(114, 204, 114);
+    border-color:white;
     color: black;
     margin-left: 30px;
     margin-top: 5px;
@@ -66,16 +55,16 @@ padding:2rem;
 
 /* bouton modifier*/
 .editButton{
-    background-color:white;
-    border-color:rgb(238, 238, 67);
+    background-color:rgb(238, 238, 67);
+    border-color:white;
     color: black;
     margin-left: 30px;
     margin-top: 5px;
 }
 /* bouton supprimer*/
 .deleteButton{
-    background-color: white;
-    border-color: red;
+    background-color: red;
+    border-color: ;
     color: black;
     margin-left: 30px;
     margin-top: 5px;
@@ -86,9 +75,9 @@ padding:2rem;
 .deleteButton {
     border: none;
     padding: 0.2rem;
+}
 
 /* message d'erreur */
 #error{
-    color: white;
-    background-color: red;
+    color: red;
 }
