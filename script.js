@@ -76,7 +76,7 @@ addButton.addEventListener("click", function(e){//mise sur écoute de addButton
         deleteButton.classList.add("deleteButton");
         tasksList.appendChild(deleteButton);
 
-            //activation bouton modifier
+            //activation bouton supprimer
             deleteButton.addEventListener("click", function(){
             liste.remove();
             checkButton.remove();
